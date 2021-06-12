@@ -21,7 +21,7 @@ class NewsScreen extends React.Component{
         return(
             <SafeAreaView style={{flex:1}}>
                  
-            <Button  backgroundColor="#841584" style={{ width: 40, flex:0 }} title="Refresh" onPress={() => {}} />
+            <Button  backgroundColor="#841584" style={{ width: 40, flex:0 }} title="Refresh" onPress={() => this.props.loadNews()} />
              {this.props.isLoading ? <ActivityIndicator style={{flex:1, flexGrow:1, justifyContent:'center', alignContent:'center', alignItems:'center'}}/> : 
             <FlatList
                 style={{marginStart:10, marginEnd:10}}
